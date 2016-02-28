@@ -7,9 +7,26 @@
 //
 
 #import "RootTableViewController.h"
+#import "ButtonsViewController.h"
 
-@implementation RootTableViewController- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 18;
+@implementation RootTableViewController {
+    NSMutableArray* vcItems;
+    NSString* vcTitle;
+    NSString* vcName;
+    
+}
+-(id) init {
+    vcTitle = @"VC_TITLE";
+    vcName = @"VC_NAME";
+    
+    vcItems = [[NSMutableArray alloc]init];
+    ButtonsViewController* x = [[ButtonsViewController alloc]init];
+    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"ButtonsViewController", vcTitle, x, vcName, nil]];
+    
+    return self;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return vcItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -19,7 +36,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MenuCell"];
     }
     
-    cell.textLabel.text = @"hello";
+    NSString* title = [[vcItems objectAtIndex:indexPath.row] objectForKey:vcTitle];
+    cell.textLabel.text = title;
     return cell;
 }
 

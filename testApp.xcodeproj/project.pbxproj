@@ -15,6 +15,7 @@
 		96924A3B1C82C2D200591C7F /* testAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96924A3A1C82C2D200591C7F /* testAppTests.m */; };
 		96924A461C82C2D300591C7F /* testAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96924A451C82C2D300591C7F /* testAppUITests.m */; };
 		96924A581C82F64700591C7F /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96924A571C82F64700591C7F /* RootTableViewController.m */; };
+		96924A5E1C83031700591C7F /* ButtonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96924A5D1C83031700591C7F /* ButtonsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		96924A471C82C2D300591C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96924A561C82F64700591C7F /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
 		96924A571C82F64700591C7F /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
+		96924A5C1C83031700591C7F /* ButtonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsViewController.h; sourceTree = "<group>"; };
+		96924A5D1C83031700591C7F /* ButtonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				96924A201C82C2D200591C7F /* Supporting Files */,
 				96924A561C82F64700591C7F /* RootTableViewController.h */,
 				96924A571C82F64700591C7F /* RootTableViewController.m */,
+				96924A5C1C83031700591C7F /* ButtonsViewController.h */,
+				96924A5D1C83031700591C7F /* ButtonsViewController.m */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96924A5E1C83031700591C7F /* ButtonsViewController.m in Sources */,
 				96924A251C82C2D200591C7F /* AppDelegate.m in Sources */,
 				96924A221C82C2D200591C7F /* main.m in Sources */,
 				96924A581C82F64700591C7F /* RootTableViewController.m in Sources */,
