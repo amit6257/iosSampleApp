@@ -16,12 +16,15 @@
     
 }
 -(id) init {
+    self = [super init];
+    [self setTitle:@"Test App"];
+    
     vcTitle = @"VC_TITLE";
     vcName = @"VC_NAME";
     
     vcItems = [[NSMutableArray alloc]init];
-    ButtonsViewController* x = [[ButtonsViewController alloc]init];
-    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"ButtonsViewController", vcTitle, x, vcName, nil]];
+    ButtonsViewController* viewController = [[ButtonsViewController alloc]init];
+    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"ButtonsViewController", vcTitle, viewController, vcName, nil]];
     
     return self;
 }
@@ -39,6 +42,12 @@
     NSString* title = [[vcItems objectAtIndex:indexPath.row] objectForKey:vcTitle];
     cell.textLabel.text = title;
     return cell;
+}
+
+
+- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
+    UIViewController* viewController = [[vcItems objectAtIndex:indexPath.row] objectForKey:vcName];
+    [[self navigationController] pushViewController:viewController animated:YES];
 }
 
 @end
