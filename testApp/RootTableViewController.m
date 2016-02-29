@@ -8,6 +8,7 @@
 
 #import "RootTableViewController.h"
 #import "ButtonsViewController.h"
+#import "FileManagerViewController.h"
 
 @implementation RootTableViewController {
     NSMutableArray* vcItems;
@@ -25,6 +26,10 @@
     vcItems = [[NSMutableArray alloc]init];
     ButtonsViewController* viewController = [[ButtonsViewController alloc]init];
     [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"ButtonsViewController", vcTitle, viewController, vcName, nil]];
+    
+    FileManagerViewController* fileVC = [[FileManagerViewController alloc]init];
+    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"File Handling", vcTitle, fileVC, vcName, nil]];
+    
     
     return self;
 }

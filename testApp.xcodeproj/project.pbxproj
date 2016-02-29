@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		963425061C84269A000A14DF /* FileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 963425051C84269A000A14DF /* FileManagerViewController.m */; };
 		96924A221C82C2D200591C7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96924A211C82C2D200591C7F /* main.m */; };
 		96924A251C82C2D200591C7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96924A241C82C2D200591C7F /* AppDelegate.m */; };
 		96924A2B1C82C2D200591C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96924A291C82C2D200591C7F /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		963425041C84269A000A14DF /* FileManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerViewController.h; sourceTree = "<group>"; };
+		963425051C84269A000A14DF /* FileManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManagerViewController.m; sourceTree = "<group>"; };
 		96924A1D1C82C2D200591C7F /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96924A211C82C2D200591C7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96924A231C82C2D200591C7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				96924A571C82F64700591C7F /* RootTableViewController.m */,
 				96924A5C1C83031700591C7F /* ButtonsViewController.h */,
 				96924A5D1C83031700591C7F /* ButtonsViewController.m */,
+				963425041C84269A000A14DF /* FileManagerViewController.h */,
+				963425051C84269A000A14DF /* FileManagerViewController.m */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			files = (
 				96924A5E1C83031700591C7F /* ButtonsViewController.m in Sources */,
 				96924A251C82C2D200591C7F /* AppDelegate.m in Sources */,
+				963425061C84269A000A14DF /* FileManagerViewController.m in Sources */,
 				96924A221C82C2D200591C7F /* main.m in Sources */,
 				96924A581C82F64700591C7F /* RootTableViewController.m in Sources */,
 			);
