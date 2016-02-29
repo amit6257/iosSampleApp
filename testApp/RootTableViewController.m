@@ -9,6 +9,7 @@
 #import "RootTableViewController.h"
 #import "ButtonsViewController.h"
 #import "FileManagerViewController.h"
+#import "UITextViewController.h"
 
 @implementation RootTableViewController {
     NSMutableArray* vcItems;
@@ -30,6 +31,8 @@
     FileManagerViewController* fileVC = [[FileManagerViewController alloc]init];
     [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"File Handling", vcTitle, fileVC, vcName, nil]];
     
+    UITextViewController* tvVC = [[UITextViewController alloc]init];
+    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"UITextView", vcTitle, tvVC, vcName, nil]];
     
     return self;
 }
