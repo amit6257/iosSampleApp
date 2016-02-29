@@ -9,7 +9,10 @@
 #import "RootTableViewController.h"
 #import "ButtonsViewController.h"
 #import "FileManagerViewController.h"
+#import "CoreTextViewController.h"
 #import "UITextViewController.h"
+#import "UIFontViewController.h"
+#import "CoreGraphicsViewController.h"
 
 @implementation RootTableViewController {
     NSMutableArray* vcItems;
@@ -34,6 +37,14 @@
     UITextViewController* tvVC = [[UITextViewController alloc]init];
     [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"UITextView", vcTitle, tvVC, vcName, nil]];
     
+    CoreTextViewController* ctVC = [[CoreTextViewController alloc]init];
+    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"CoreText", vcTitle, ctVC, vcName, nil]];
+    
+    UIFontViewController* uifontVC = [[UIFontViewController alloc]init];
+    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"UIFont", vcTitle, uifontVC, vcName, nil]];
+    
+    CoreGraphicsViewController* cgVC = [[CoreGraphicsViewController alloc] init];
+    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Core Graphics", vcTitle, cgVC, vcName, nil]];
     return self;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

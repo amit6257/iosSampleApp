@@ -13,7 +13,7 @@
 - (void) viewDidLoad {
     [self setTitle:@"ButtonsViewController"];
     self.view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor blueColor];
     
     //add button
     [self.view addSubview:[self getButton]];
@@ -35,7 +35,7 @@
 - (UIButton*)getButtonForAction {
     // cant use origin as 0,0???why???
     UIButton* button = [[UIButton alloc]initWithFrame:CGRectMake(10, 150, 100, 30)];
-    [button setTitle:@"press me" forState:UIControlStateNormal];
+    [button setTitle:@"Alert Button" forState:UIControlStateNormal];
     return button;
 }
 
