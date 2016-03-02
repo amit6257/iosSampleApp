@@ -23,6 +23,7 @@
 		96924A5E1C83031700591C7F /* ButtonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96924A5D1C83031700591C7F /* ButtonsViewController.m */; };
 		96DD63D91C86998D006355A8 /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DD63D71C86998D006355A8 /* TextFieldViewController.m */; };
 		96DD63DA1C86998D006355A8 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DD63D81C86998D006355A8 /* TextFieldViewController.xib */; };
+		96DD63E31C86A97C006355A8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DD63E11C86A97C006355A8 /* TabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		96DD63D61C86998D006355A8 /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldViewController.h; sourceTree = "<group>"; };
 		96DD63D71C86998D006355A8 /* TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
 		96DD63D81C86998D006355A8 /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
+		96DD63E01C86A97C006355A8 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		96DD63E11C86A97C006355A8 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 				96DD63D61C86998D006355A8 /* TextFieldViewController.h */,
 				96DD63D71C86998D006355A8 /* TextFieldViewController.m */,
 				96DD63D81C86998D006355A8 /* TextFieldViewController.xib */,
+				96DD63E01C86A97C006355A8 /* TabBarViewController.h */,
+				96DD63E11C86A97C006355A8 /* TabBarViewController.m */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				96DD63D91C86998D006355A8 /* TextFieldViewController.m in Sources */,
 				9634250F1C8430E0000A14DF /* CoreTextViewController.m in Sources */,
 				963425061C84269A000A14DF /* FileManagerViewController.m in Sources */,
+				96DD63E31C86A97C006355A8 /* TabBarViewController.m in Sources */,
 				963425121C843134000A14DF /* UIFontViewController.m in Sources */,
 				96924A221C82C2D200591C7F /* main.m in Sources */,
 				96924A581C82F64700591C7F /* RootTableViewController.m in Sources */,

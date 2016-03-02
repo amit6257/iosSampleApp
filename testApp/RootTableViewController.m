@@ -14,6 +14,7 @@
 #import "UIFontViewController.h"
 #import "CoreGraphicsViewController.h"
 #import "TextFieldViewController.h"
+#import "TabBarViewController.h"
 
 @implementation RootTableViewController {
     NSMutableArray* vcItems;
@@ -49,6 +50,9 @@
     
     TextFieldViewController* tfVC = [[TextFieldViewController alloc] init];
     [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"TextField", vcTitle, tfVC, vcName, nil]];
+    
+    TabBarViewController* tabVC = [[TabBarViewController alloc] init];
+    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Tab Bar", vcTitle, tabVC, vcName, nil]];
     return self;
     
 }

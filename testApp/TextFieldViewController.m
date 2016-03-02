@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"TextField";
     [self.inputCelsius setDelegate:self];
     
 }
