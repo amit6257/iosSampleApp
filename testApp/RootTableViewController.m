@@ -13,6 +13,7 @@
 #import "UITextViewController.h"
 #import "UIFontViewController.h"
 #import "CoreGraphicsViewController.h"
+#import "TextFieldViewController.h"
 
 @implementation RootTableViewController {
     NSMutableArray* vcItems;
@@ -45,7 +46,11 @@
     
     CoreGraphicsViewController* cgVC = [[CoreGraphicsViewController alloc] init];
     [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Core Graphics", vcTitle, cgVC, vcName, nil]];
+    
+    TextFieldViewController* tfVC = [[TextFieldViewController alloc] init];
+    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"TextField", vcTitle, tfVC, vcName, nil]];
     return self;
+    
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return vcItems.count;

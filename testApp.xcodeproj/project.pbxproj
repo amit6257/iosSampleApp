@@ -21,6 +21,8 @@
 		96924A461C82C2D300591C7F /* testAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96924A451C82C2D300591C7F /* testAppUITests.m */; };
 		96924A581C82F64700591C7F /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96924A571C82F64700591C7F /* RootTableViewController.m */; };
 		96924A5E1C83031700591C7F /* ButtonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96924A5D1C83031700591C7F /* ButtonsViewController.m */; };
+		96DD63D91C86998D006355A8 /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DD63D71C86998D006355A8 /* TextFieldViewController.m */; };
+		96DD63DA1C86998D006355A8 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DD63D81C86998D006355A8 /* TextFieldViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,9 @@
 		96924A571C82F64700591C7F /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
 		96924A5C1C83031700591C7F /* ButtonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsViewController.h; sourceTree = "<group>"; };
 		96924A5D1C83031700591C7F /* ButtonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsViewController.m; sourceTree = "<group>"; };
+		96DD63D61C86998D006355A8 /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldViewController.h; sourceTree = "<group>"; };
+		96DD63D71C86998D006355A8 /* TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
+		96DD63D81C86998D006355A8 /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +145,9 @@
 				963425111C843134000A14DF /* UIFontViewController.m */,
 				963425131C8431C7000A14DF /* CoreGraphicsViewController.h */,
 				963425141C8431C7000A14DF /* CoreGraphicsViewController.m */,
+				96DD63D61C86998D006355A8 /* TextFieldViewController.h */,
+				96DD63D71C86998D006355A8 /* TextFieldViewController.m */,
+				96DD63D81C86998D006355A8 /* TextFieldViewController.xib */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -273,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96DD63DA1C86998D006355A8 /* TextFieldViewController.xib in Resources */,
 				96924A301C82C2D200591C7F /* LaunchScreen.storyboard in Resources */,
 				96924A2D1C82C2D200591C7F /* Assets.xcassets in Resources */,
 				96924A2B1C82C2D200591C7F /* Main.storyboard in Resources */,
@@ -304,6 +313,7 @@
 				9634250C1C842E88000A14DF /* UITextViewController.m in Sources */,
 				96924A251C82C2D200591C7F /* AppDelegate.m in Sources */,
 				963425151C8431C7000A14DF /* CoreGraphicsViewController.m in Sources */,
+				96DD63D91C86998D006355A8 /* TextFieldViewController.m in Sources */,
 				9634250F1C8430E0000A14DF /* CoreTextViewController.m in Sources */,
 				963425061C84269A000A14DF /* FileManagerViewController.m in Sources */,
 				963425121C843134000A14DF /* UIFontViewController.m in Sources */,
