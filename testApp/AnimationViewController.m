@@ -47,6 +47,9 @@
         frame.origin.x = frame.origin.x + 100;
         [UIView animateWithDuration:2 animations:^{
             self.leftToRightLabel.frame = frame;
+        } completion:^(BOOL finished){
+            self.leftToRightLabel.backgroundColor = [UIColor greenColor];
+            
         }];
     } else {
         direction = 1;
@@ -54,6 +57,8 @@
         frame.origin.x = frame.origin.x - 100;
         [UIView animateWithDuration:2 animations:^{
             self.leftToRightLabel.frame = frame;
+        } completion:^(BOOL finished){
+            self.leftToRightLabel.backgroundColor = [UIColor redColor];
         }];
     }
 }
