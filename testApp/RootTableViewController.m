@@ -15,6 +15,7 @@
 #import "CoreGraphicsViewController.h"
 #import "TextFieldViewController.h"
 #import "TabBarViewController.h"
+#import "AnimationViewController.h"
 
 @implementation RootTableViewController {
     NSMutableArray* vcItems;
@@ -53,6 +54,10 @@
     
     TabBarViewController* tabVC = [[TabBarViewController alloc] init];
     [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Tab Bar", vcTitle, tabVC, vcName, nil]];
+    
+    AnimationViewController* animVC = [[AnimationViewController alloc] init];
+    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Animation", vcTitle, animVC, vcName, nil]];
+    
     return self;
     
 }

@@ -24,6 +24,8 @@
 		96DD63D91C86998D006355A8 /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DD63D71C86998D006355A8 /* TextFieldViewController.m */; };
 		96DD63DA1C86998D006355A8 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DD63D81C86998D006355A8 /* TextFieldViewController.xib */; };
 		96DD63E31C86A97C006355A8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DD63E11C86A97C006355A8 /* TabBarViewController.m */; };
+		96DD63EB1C86AEB3006355A8 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DD63E91C86AEB3006355A8 /* AnimationViewController.m */; };
+		96DD63EC1C86AEB3006355A8 /* AnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DD63EA1C86AEB3006355A8 /* AnimationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,9 @@
 		96DD63D81C86998D006355A8 /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		96DD63E01C86A97C006355A8 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		96DD63E11C86A97C006355A8 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		96DD63E81C86AEB3006355A8 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		96DD63E91C86AEB3006355A8 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		96DD63EA1C86AEB3006355A8 /* AnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +158,9 @@
 				96DD63D81C86998D006355A8 /* TextFieldViewController.xib */,
 				96DD63E01C86A97C006355A8 /* TabBarViewController.h */,
 				96DD63E11C86A97C006355A8 /* TabBarViewController.m */,
+				96DD63E81C86AEB3006355A8 /* AnimationViewController.h */,
+				96DD63E91C86AEB3006355A8 /* AnimationViewController.m */,
+				96DD63EA1C86AEB3006355A8 /* AnimationViewController.xib */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -287,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96DD63DA1C86998D006355A8 /* TextFieldViewController.xib in Resources */,
+				96DD63EC1C86AEB3006355A8 /* AnimationViewController.xib in Resources */,
 				96924A301C82C2D200591C7F /* LaunchScreen.storyboard in Resources */,
 				96924A2D1C82C2D200591C7F /* Assets.xcassets in Resources */,
 				96924A2B1C82C2D200591C7F /* Main.storyboard in Resources */,
@@ -317,6 +326,7 @@
 				96924A5E1C83031700591C7F /* ButtonsViewController.m in Sources */,
 				9634250C1C842E88000A14DF /* UITextViewController.m in Sources */,
 				96924A251C82C2D200591C7F /* AppDelegate.m in Sources */,
+				96DD63EB1C86AEB3006355A8 /* AnimationViewController.m in Sources */,
 				963425151C8431C7000A14DF /* CoreGraphicsViewController.m in Sources */,
 				96DD63D91C86998D006355A8 /* TextFieldViewController.m in Sources */,
 				9634250F1C8430E0000A14DF /* CoreTextViewController.m in Sources */,
