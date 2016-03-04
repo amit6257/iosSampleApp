@@ -75,13 +75,15 @@
         doubleTapRecognizer.delaysTouchesBegan = YES;
         [self addGestureRecognizer:doubleTapRecognizer];
         //
-        //        UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
-        //        tapRecognizer.delaysTouchesBegan = YES;
-        //        [tapRecognizer requireGestureRecognizerToFail:doubleTapRecognizer];
+        UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
+        tapRecognizer.delaysTouchesBegan = YES;
+        [tapRecognizer requireGestureRecognizerToFail:doubleTapRecognizer];
+        [self addGestureRecognizer:tapRecognizer];
+        
         //
         //        UILongPressGestureRecognizer* longPressRecognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
         //        [self addGestureRecognizer:longPressRecognizer];
-        //        [self addGestureRecognizer:tapRecognizer];
+        //
         //
         //        _moveRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(moveLine:)];
         //        _moveRecognizer.delegate = self;
@@ -113,10 +115,10 @@
 //    }
 //
 //}
-//
-//-(BOOL)canBecomeFirstResponder{
-//    return YES;
-//}
+
+-(BOOL)canBecomeFirstResponder{
+    return YES;
+}
 
 -(void)deleteLine:(id)sender{
     if (self.selectedLine) {
@@ -137,23 +139,24 @@
 //    [self setNeedsDisplay];
 //
 //}
-//-(void)tap:(UIGestureRecognizer*)gestureRecognizer {
-//    NSLog(@"%s", __PRETTY_FUNCTION__);
-//    CGPoint location = [gestureRecognizer locationInView:self];
-//    self.selectedLine = [self lineAtPoint:location];
-//    UIMenuController* menucontroller = [UIMenuController sharedMenuController];
-//    if (self.selectedLine) {
-//        [self becomeFirstResponder];
-//        UIMenuItem* deleteMenuItem = [[UIMenuItem alloc]initWithTitle:@"Delete" action:@selector(deleteLine:)];
-//        menucontroller.menuItems = @[deleteMenuItem];
-//        [menucontroller setTargetRect:CGRectMake(location.x, location.y, 2, 2) inView:self];
-//        [menucontroller setMenuVisible:YES animated:YES];
-//    } else{
-//        [menucontroller setMenuVisible:NO animated:YES];
-//    }
-//
-//    [self setNeedsDisplay];
-//}
+
+-(void)tap:(UIGestureRecognizer*)gestureRecognizer {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    CGPoint location = [gestureRecognizer locationInView:self];
+    self.selectedLine = [self lineAtPoint:location];
+    UIMenuController* menucontroller = [UIMenuController sharedMenuController];
+    if (self.selectedLine) {
+        [self becomeFirstResponder];
+        UIMenuItem* deleteMenuItem = [[UIMenuItem alloc]initWithTitle:@"Delete" action:@selector(deleteLine:)];
+        menucontroller.menuItems = @[deleteMenuItem];
+        [menucontroller setTargetRect:CGRectMake(location.x, location.y, 2, 2) inView:self];
+        [menucontroller setMenuVisible:YES animated:YES];
+    } else{
+        [menucontroller setMenuVisible:NO animated:YES];
+    }
+
+    [self setNeedsDisplay];
+}
 -(void)doubleTap:(UITapGestureRecognizer*)gestureRecognizer {
     NSLog(@"double tapp");
     [self.currentLines removeAllObjects];
