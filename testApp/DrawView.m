@@ -120,8 +120,11 @@
             line.end = end;
             
             [self setNeedsDisplay];
+        } else if (panGesture.state == UIGestureRecognizerStateEnded) {
+            [self.currentLines removeAllObjects];
+            [self setNeedsDisplay];
         }
-    }else {
+    } else {
         return;
     }
 
