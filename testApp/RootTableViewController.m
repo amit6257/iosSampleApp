@@ -16,6 +16,7 @@
 #import "TextFieldViewController.h"
 #import "TabBarViewController.h"
 #import "AnimationViewController.h"
+#import "EventsViewController.h"
 
 @implementation RootTableViewController {
     NSMutableArray* vcItems;
@@ -25,7 +26,7 @@
 }
 -(id) init {
     self = [super init];
-    [self setTitle:@"Test App"];
+    [self setTitle:@"Ios Apis Samples"];
     
     vcTitle = @"VC_TITLE";
     vcName = @"VC_NAME";
@@ -57,6 +58,9 @@
     
     AnimationViewController* animVC = [[AnimationViewController alloc] init];
     [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Animation", vcTitle, animVC, vcName, nil]];
+    
+    EventsViewController* eventVC = [[EventsViewController alloc] init];
+    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Event Handling", vcTitle, eventVC, vcName, nil]];
     
     return self;
     
