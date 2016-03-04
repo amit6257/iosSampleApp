@@ -64,29 +64,29 @@
 
 -(instancetype)init{
     self = [super init];
-//    The multipleTouchEnabled property is set to NO by default, which means that a view receives only the first touch in a multitouch sequence. When this property is disabled, you can retrieve a touch object by calling the anyObject method on the set object because there is only one object in the set.
+    //    The multipleTouchEnabled property is set to NO by default, which means that a view receives only the first touch in a multitouch sequence. When this property is disabled, you can retrieve a touch object by calling the anyObject method on the set object because there is only one object in the set.
     self.multipleTouchEnabled = YES;
     if (self) {
         _currentLines = [[NSMutableDictionary alloc]init];
         _finishedLines = [[NSMutableArray alloc]init];
         
-//        UITapGestureRecognizer* doubleTapRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTap:)];
-//        doubleTapRecognizer.numberOfTapsRequired = 2;
-//        doubleTapRecognizer.delaysTouchesBegan = YES;
-//        [self addGestureRecognizer:doubleTapRecognizer];
-//        
-//        UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
-//        tapRecognizer.delaysTouchesBegan = YES;
-//        [tapRecognizer requireGestureRecognizerToFail:doubleTapRecognizer];
-//        
-//        UILongPressGestureRecognizer* longPressRecognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
-//        [self addGestureRecognizer:longPressRecognizer];
-//        [self addGestureRecognizer:tapRecognizer];
-//        
-//        _moveRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(moveLine:)];
-//        _moveRecognizer.delegate = self;
-//        _moveRecognizer.cancelsTouchesInView = NO;
-//        [self addGestureRecognizer:_moveRecognizer];
+        UITapGestureRecognizer* doubleTapRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTap:)];
+        doubleTapRecognizer.numberOfTapsRequired = 2;
+        doubleTapRecognizer.delaysTouchesBegan = YES;
+        [self addGestureRecognizer:doubleTapRecognizer];
+        //
+        //        UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
+        //        tapRecognizer.delaysTouchesBegan = YES;
+        //        [tapRecognizer requireGestureRecognizerToFail:doubleTapRecognizer];
+        //
+        //        UILongPressGestureRecognizer* longPressRecognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
+        //        [self addGestureRecognizer:longPressRecognizer];
+        //        [self addGestureRecognizer:tapRecognizer];
+        //
+        //        _moveRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(moveLine:)];
+        //        _moveRecognizer.delegate = self;
+        //        _moveRecognizer.cancelsTouchesInView = NO;
+        //        [self addGestureRecognizer:_moveRecognizer];
     }
     return  self;
 }
@@ -100,7 +100,7 @@
 //            begin.x += translation.x;
 //            begin.y += translation.y;
 //            line.begin = begin;
-//            
+//
 //            CGPoint end = line.end;
 //            end.x += translation.x;
 //            end.y += translation.y;
@@ -111,7 +111,7 @@
 //    }else {
 //        return;
 //    }
-//    
+//
 //}
 //
 //-(BOOL)canBecomeFirstResponder{
@@ -135,7 +135,7 @@
 //        self.selectedLine = nil;
 //    }
 //    [self setNeedsDisplay];
-//    
+//
 //}
 //-(void)tap:(UIGestureRecognizer*)gestureRecognizer {
 //    NSLog(@"%s", __PRETTY_FUNCTION__);
@@ -154,13 +154,13 @@
 //
 //    [self setNeedsDisplay];
 //}
-//-(void)doubleTap:(UITapGestureRecognizer*)gestureRecognizer {
-//    NSLog(@"double tapp");
-//    [self.currentLines removeAllObjects];
-//    [self.finishedLines removeAllObjects];
-//    
-//    [self setNeedsDisplay];
-//}
+-(void)doubleTap:(UITapGestureRecognizer*)gestureRecognizer {
+    NSLog(@"double tapp");
+    [self.currentLines removeAllObjects];
+    [self.finishedLines removeAllObjects];
+    
+    [self setNeedsDisplay];
+}
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"%s", __PRETTY_FUNCTION__);
@@ -187,7 +187,9 @@
         CGPoint location = [touch locationInView:self];
         NSValue *key = [NSValue valueWithNonretainedObject:touch];
         Line* line = self.currentLines[key];
-        line.end = location;
+        if (line) {
+            line.end = location;
+        }
     }
     
     [self setNeedsDisplay];
@@ -199,13 +201,12 @@
         CGPoint location = [touch locationInView:self];
         NSValue* key = [NSValue valueWithNonretainedObject:touch];
         Line* line = self.currentLines[key];
-        line.end = location;
-        
-        [self.finishedLines addObject:line];
-        [self.currentLines removeObjectForKey:key];
-        
+        if (line) {
+            line.end = location;
+            [self.finishedLines addObject:line];
+            [self.currentLines removeObjectForKey:key];
+        }
     }
-    
     [self setNeedsDisplay];
 }
 @end
