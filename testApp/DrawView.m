@@ -71,18 +71,18 @@
         _finishedLines = [[NSMutableArray alloc]init];
         
         [self addTapGestureRecognizers];
-        
-        //        UILongPressGestureRecognizer* longPressRecognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
-        //        [self addGestureRecognizer:longPressRecognizer];
-        //
-        //
         [self addPanGestureRecognizer];
     }
     return  self;
 }
+
 -(void)addPanGestureRecognizer {
     _moveRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(moveLine:)];
     _moveRecognizer.delegate = self;
+    //cancelsTouchesInView: Every UIGestureRecognizer has this property and, by default, this property
+    //is YES. This means that the gesture
+    //recognizer will eat any touch it recognizes so that the view will not have a chance to handle it
+    //via the traditional UIResponder methods, like touchesBegan:withEvent:.
     _moveRecognizer.cancelsTouchesInView = NO;
     [self addGestureRecognizer:_moveRecognizer];
 }
@@ -140,19 +140,6 @@
         [self setNeedsDisplay];
     }
 }
-//-(void)longPress:(UILongPressGestureRecognizer*)longPressRecognizer {
-//    if (longPressRecognizer.state == UIGestureRecognizerStateBegan) {
-//        CGPoint location =  [longPressRecognizer locationInView:self];
-//        self.selectedLine = [self lineAtPoint:location];
-//        if (self.selectedLine) {
-//            [self.currentLines removeAllObjects];
-//        }
-//    } else if(longPressRecognizer.state == UIGestureRecognizerStateEnded) {
-//        self.selectedLine = nil;
-//    }
-//    [self setNeedsDisplay];
-//
-//}
 
 -(void)tap:(UIGestureRecognizer*)gestureRecognizer {
     NSLog(@"%s", __PRETTY_FUNCTION__);
