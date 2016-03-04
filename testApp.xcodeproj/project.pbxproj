@@ -14,6 +14,8 @@
 		963425151C8431C7000A14DF /* CoreGraphicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 963425141C8431C7000A14DF /* CoreGraphicsViewController.m */; };
 		965B411E1C894F110038FA71 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965B411D1C894F110038FA71 /* EventsViewController.m */; };
 		965B41241C8957590038FA71 /* LinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965B41231C8957590038FA71 /* LinesViewController.m */; };
+		965B41291C89596C0038FA71 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 965B41261C89596C0038FA71 /* DrawView.m */; };
+		965B412A1C89596C0038FA71 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 965B41281C89596C0038FA71 /* Line.m */; };
 		96924A221C82C2D200591C7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96924A211C82C2D200591C7F /* main.m */; };
 		96924A251C82C2D200591C7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96924A241C82C2D200591C7F /* AppDelegate.m */; };
 		96924A2B1C82C2D200591C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96924A291C82C2D200591C7F /* Main.storyboard */; };
@@ -62,6 +64,10 @@
 		965B411D1C894F110038FA71 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		965B41221C8957590038FA71 /* LinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinesViewController.h; sourceTree = "<group>"; };
 		965B41231C8957590038FA71 /* LinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinesViewController.m; sourceTree = "<group>"; };
+		965B41251C89596C0038FA71 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		965B41261C89596C0038FA71 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		965B41271C89596C0038FA71 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		965B41281C89596C0038FA71 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
 		96924A1D1C82C2D200591C7F /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96924A211C82C2D200591C7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96924A231C82C2D200591C7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,12 +124,34 @@
 		965B411B1C894EE70038FA71 /* Event Handling */ = {
 			isa = PBXGroup;
 			children = (
-				965B411C1C894F110038FA71 /* EventsViewController.h */,
+				965B41261C89596C0038FA71 /* DrawView.m */,
+				965B41281C89596C0038FA71 /* Line.m */,
 				965B411D1C894F110038FA71 /* EventsViewController.m */,
-				965B41221C8957590038FA71 /* LinesViewController.h */,
 				965B41231C8957590038FA71 /* LinesViewController.m */,
 			);
 			name = "Event Handling";
+			sourceTree = "<group>";
+		};
+		965B412B1C895A8A0038FA71 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				965B411C1C894F110038FA71 /* EventsViewController.h */,
+				96924A561C82F64700591C7F /* RootTableViewController.h */,
+				965B41221C8957590038FA71 /* LinesViewController.h */,
+				96924A5C1C83031700591C7F /* ButtonsViewController.h */,
+				963425041C84269A000A14DF /* FileManagerViewController.h */,
+				9634250A1C842E88000A14DF /* UITextViewController.h */,
+				965B41271C89596C0038FA71 /* Line.h */,
+				9634250D1C8430E0000A14DF /* CoreTextViewController.h */,
+				96DD63E01C86A97C006355A8 /* TabBarViewController.h */,
+				965B41251C89596C0038FA71 /* DrawView.h */,
+				96924A231C82C2D200591C7F /* AppDelegate.h */,
+				96DD63E81C86AEB3006355A8 /* AnimationViewController.h */,
+				963425101C843134000A14DF /* UIFontViewController.h */,
+				963425131C8431C7000A14DF /* CoreGraphicsViewController.h */,
+				96DD63D61C86998D006355A8 /* TextFieldViewController.h */,
+			);
+			name = Headers;
 			sourceTree = "<group>";
 		};
 		96924A141C82C2D200591C7F = {
@@ -149,34 +177,24 @@
 		96924A1F1C82C2D200591C7F /* testApp */ = {
 			isa = PBXGroup;
 			children = (
+				965B412B1C895A8A0038FA71 /* Headers */,
 				965B411B1C894EE70038FA71 /* Event Handling */,
-				96924A231C82C2D200591C7F /* AppDelegate.h */,
 				96924A241C82C2D200591C7F /* AppDelegate.m */,
 				96924A291C82C2D200591C7F /* Main.storyboard */,
 				96924A2C1C82C2D200591C7F /* Assets.xcassets */,
 				96924A2E1C82C2D200591C7F /* LaunchScreen.storyboard */,
 				96924A311C82C2D200591C7F /* Info.plist */,
 				96924A201C82C2D200591C7F /* Supporting Files */,
-				96924A561C82F64700591C7F /* RootTableViewController.h */,
 				96924A571C82F64700591C7F /* RootTableViewController.m */,
-				96924A5C1C83031700591C7F /* ButtonsViewController.h */,
 				96924A5D1C83031700591C7F /* ButtonsViewController.m */,
-				963425041C84269A000A14DF /* FileManagerViewController.h */,
 				963425051C84269A000A14DF /* FileManagerViewController.m */,
-				9634250A1C842E88000A14DF /* UITextViewController.h */,
 				9634250B1C842E88000A14DF /* UITextViewController.m */,
-				9634250D1C8430E0000A14DF /* CoreTextViewController.h */,
 				9634250E1C8430E0000A14DF /* CoreTextViewController.m */,
-				963425101C843134000A14DF /* UIFontViewController.h */,
 				963425111C843134000A14DF /* UIFontViewController.m */,
-				963425131C8431C7000A14DF /* CoreGraphicsViewController.h */,
 				963425141C8431C7000A14DF /* CoreGraphicsViewController.m */,
-				96DD63D61C86998D006355A8 /* TextFieldViewController.h */,
 				96DD63D71C86998D006355A8 /* TextFieldViewController.m */,
 				96DD63D81C86998D006355A8 /* TextFieldViewController.xib */,
-				96DD63E01C86A97C006355A8 /* TabBarViewController.h */,
 				96DD63E11C86A97C006355A8 /* TabBarViewController.m */,
-				96DD63E81C86AEB3006355A8 /* AnimationViewController.h */,
 				96DD63E91C86AEB3006355A8 /* AnimationViewController.m */,
 				96DD63EA1C86AEB3006355A8 /* AnimationViewController.xib */,
 			);
@@ -351,11 +369,13 @@
 				963425151C8431C7000A14DF /* CoreGraphicsViewController.m in Sources */,
 				96DD63D91C86998D006355A8 /* TextFieldViewController.m in Sources */,
 				9634250F1C8430E0000A14DF /* CoreTextViewController.m in Sources */,
+				965B412A1C89596C0038FA71 /* Line.m in Sources */,
 				963425061C84269A000A14DF /* FileManagerViewController.m in Sources */,
 				96DD63E31C86A97C006355A8 /* TabBarViewController.m in Sources */,
 				963425121C843134000A14DF /* UIFontViewController.m in Sources */,
 				96924A221C82C2D200591C7F /* main.m in Sources */,
 				96924A581C82F64700591C7F /* RootTableViewController.m in Sources */,
+				965B41291C89596C0038FA71 /* DrawView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
