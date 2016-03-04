@@ -64,6 +64,8 @@
 
 -(instancetype)init{
     self = [super init];
+//    The multipleTouchEnabled property is set to NO by default, which means that a view receives only the first touch in a multitouch sequence. When this property is disabled, you can retrieve a touch object by calling the anyObject method on the set object because there is only one object in the set.
+    self.multipleTouchEnabled = YES;
     if (self) {
         _currentLines = [[NSMutableDictionary alloc]init];
         _finishedLines = [[NSMutableArray alloc]init];
@@ -162,7 +164,9 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"%s", __PRETTY_FUNCTION__);
+    //since multiple fingers can be touched
     for (UITouch* touch in touches) {
+        NSLog(@"no of touches = %d", touches.count);
         CGPoint location = [touch locationInView:self];
         Line* newLine = [[Line alloc]initWithBegin:location end:location];
         NSValue *key = [NSValue valueWithNonretainedObject:touch];
