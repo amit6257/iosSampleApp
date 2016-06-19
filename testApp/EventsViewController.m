@@ -28,7 +28,7 @@
     vcItems = [NSMutableArray new];
     
     LinesViewController* lineVC = [[LinesViewController alloc]init];
-    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"File Handling", vcTitle, lineVC, vcName, nil]];
+    [vcItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Line Handling", vcTitle, lineVC, vcName, nil]];
     
 }
 
